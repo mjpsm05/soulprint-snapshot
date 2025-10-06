@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "app.py",
-      "use": "@vercel/python"
+  "functions": {
+    "api/*.py": {
+      "runtime": "python3.12"
     }
-  ],
+  },
   "routes": [
-    {
-      "src": "/soulprint-snapshot",
-      "dest": "/app.py"
-    }
+    { "src": "/soulprint-snapshot", "dest": "/app.py" }
   ]
 }
+
